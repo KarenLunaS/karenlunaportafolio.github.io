@@ -20,7 +20,7 @@ document.addEventListener("DOMContentLoaded", () => {
 //función para cambiarle el tema a la pagina
 document.addEventListener('DOMContentLoaded', () => {
     const bgCheckbox = document.getElementById('toggle-bg-checkbox');
-    const tarjetas = document.querySelectorAll('.card');
+    const tarjetas = document.querySelectorAll('.card, .texto-presentacion');
 
     // Verificamos que el elemento exista antes de agregar el evento
     if (bgCheckbox) {

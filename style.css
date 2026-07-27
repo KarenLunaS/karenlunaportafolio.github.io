@@ -268,6 +268,10 @@ section {
     line-height: 1.6;
 }
 
+.texto-presentacion.no-bg{
+    color: #000000;
+}
+
 .contenedor-botones {
     grid-column: span 2;
     display: flex;
