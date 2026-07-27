@@ -171,6 +171,33 @@ section {
 .theme-checkbox:checked {
   background-position: 100%;
 }
+/*Haciendo responsive el switch*/
+/* --- Media Query: Tabletas y Móviles (≤ 768px) --- */
+@media (max-width: 768px) {
+    /* Si el menú de navegación se apila verticalmente */
+    .nav {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    /* Regresamos el botón al flujo normal para que no choque con los enlaces */
+    .nav__btn-bg {
+        position: static; 
+        margin-top: 5px;
+    }
+
+    /* Reducimos ligeramente el tamaño del switch para pantallas pequeñas */
+    .theme-checkbox {
+        --toggle-size: 7px;
+    }
+}
+
+/* --- Media Query: Pantallas muy pequeñas (≤ 480px) --- */
+@media (max-width: 480px) {
+    .theme-checkbox {
+        --toggle-size: 6px; /* Switch un poco más compacto en teléfonos chicos */
+    }
+}
 
 /* Sección Presentación */
 .presentacion {
