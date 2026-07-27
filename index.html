@@ -4,75 +4,229 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Portafolio Karen Luna</title>
+    
+    <!-- Google Fonts Montserrat -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+
+    <!-- Devicon Logos -->
+    <link rel="stylesheet" type='text/css' href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css">
+    
+    <!-- Bootstrap 5 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    
+    <!-- CSS Personalizado -->
     <link rel="stylesheet" href="style.css">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
 </head>
+
 <body>
-    <nav class="nav">
-        <ul class="nav justify-content-center">
-            <li><a href="#">PROYECTOS</a></li>
-            <li><a href="#">ACERCA DE MI</a></li>
-            <li><a href="#">SKILLS</a></li>
-            <li><a href="#">CONTACTO</a></li>
-        </ul>
-    </nav>
+    <header class="encabezado">
+        <nav class="nav contenedor">
+            <ul class="nav__lista">
+                <li><a href="#proyectos" class="nav__enlace">PROYECTOS</a></li>
+                <li><a href="#acerca" class="nav__enlace">ACERCA DE MÍ</a></li>
+                <li><a href="#skills" class="nav__enlace">SKILLS</a></li>
+                <li><a href="#contacto" class="nav__enlace">CONTACTO</a></li>
+            </ul>
+        </nav>
+    </header>
 
-    <div class="container text-center">
-        <div class="row py-5">
-            <div class="col-sm-8 px-5">
-                <h1 class="nombre">Karen Montserrat <br>Luna Salmeron</h1>
-                <p class="titulo">Desarrolladora Java FullStack</p>
-                <p class="descripcion">Desarrolladora Full Stack con enfoque en Java y Programación Orientada a Objetos (POO). Diseño y desarrollo sitios web bajo estructuras solidas.
-                </p>
-            </div>
-            <div class="col-sm-4"> 
-                <img src="img/Karen Luna-Desarrollador Java FullSatck.jpeg" class="foto">
-            </div>
-            </div>
-    </div>
-
-    <section class = "stack py-5">
-        <ul>
-            <li><img src="img/java.png" class="img_stack"></li>
-            <li><img src="img/python.jpg" class="img_stack"></li>
-            <li><img src="img/javaScript.png" class="img_stack"></li>
-            <li><img src="img/html.jpg" class="img_stack"></li>
-            <li><img src="img/css.jpg" class="img_stack"></li>
-        </ul>
-    </section>
-
-    <section>
-        <div class="titulos_secciones py-5">PROYECTOS</div>
-        <div class="card mb-3">
-            <img src="img/toro_forrajero.png" class="card-img-top imagen_proyectos" alt="toro_forrajero_ecommerce">
-            <div class="card-body">
-                <h5 class="card-title"> Plataforma de E-commerce | TORO FORRAJERO</h5>
-                <p class="card-text">Plataforma que busca democratizar el acceso a  especialistas y personas con pequeños negocios que deseen acceder a un catálogo de productos y soluciones de logística mediante un comercio electrónico, para realizar pedidos de forma fácil y rápida desde cualquier lugar.</p>
-                <a href="https://github.com/D-a-v-i-d-Vargas/Toro-Forrajero-Ecommerce">Link a repositorio en Github</a>
-                <p class="card-text"><small class="text-body-secondary">Proyecto en proceso</small></p>
-            </div>
+    <section class="presentacion contenedor">
+        <div class="mi-nombre">
+            Karen Montserrat<br>Luna Salmerón
         </div>
 
-        <div class="card mb-3">
-            <img src="img/vexa.png" class="card-img-top imagen_proyectos" alt="vexa">
-            <div class="card-body">
-                <h5 class="card-title"> Landing Page | HACKATON</h5>
-                <p class="card-text">Landing Page de una pagina deportiva de la marca VEXA. En este Hackaton desarrollé, junto con un equipo de 6 integrantes, una landing page interactiva en menos de 10 horas, utilizando HTML para la estructura, CSS y Bootstrap para un diseño responsive, y JavaScript para implementar funcionalidades interactivas.</p>
-                <a href="https://github.com/AriVeraI/Hackathon-1-GJFS">Link a repositorio en Github</a>
-                <p class="card-text"><small class="text-body-secondary">Proyecto realizado en Junio 2026</small></p>
+        <img src="img/Karen Luna-Desarrollador Java FullSatck.jpeg" alt="Foto Karen Luna" class="foto">
+        
+        <div class="rol">Desarrolladora <span class="java"><strong>Java FullStack</strong></span></div>
+        
+        <div class="texto-presentacion">
+            Me motiva crear código con propósito, diseño con intención y experiencias pensadas para las personas.
+        </div>
+
+        <div class="contenedor-botones">
+            <a href="#proyectos" class="button type1 d-flex align-items-center justify-content-center text-decoration-none">
+                <span class="btn-txt">Proyectos</span>
+            </a>
+            <a href="doc/Karen Montserrat Luna Salmerón_actualizado.pdf" target="_blank" rel="noopener noreferrer" class="button type1 d-flex align-items-center justify-content-center text-decoration-none">
+                <span class="btn-txt">Ver CV</span>
+            </a>
+        </div>
+
+        <div class="separacion"></div>
+    </section>
+
+    <section id="skills" class="stack revelar py-5 ">
+        <div class="stack-titulo">Stack Tecnológico</div>
+        <div class="contenedor-stack">
+            <ul class="lista-stack">            
+                <li><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/java/java-plain-wordmark.svg" alt="Java" class="img_stack stack-java"></li>
+                <li><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/python/python-original-wordmark.svg" alt="Python" class="img_stack"></li>
+                <li><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/html5/html5-plain-wordmark.svg" alt="HTML5" class="img_stack"></li>
+                <li><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/css3/css3-original-wordmark.svg" alt="CSS3" class="img_stack"></li>
+                <li><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/javascript/javascript-original.svg" alt="JavaScript" class="img_stack"></li>
+                <li><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/figma/figma-original.svg" alt="Figma" class="img_stack"></li>
+                <li><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/bootstrap/bootstrap-original-wordmark.svg" alt="Bootstrap" class="img_stack"></li>
+                <li><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/jira/jira-original-wordmark.svg" alt="Jira" class="img_stack"></li>
+                <li><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/github/github-original-wordmark.svg" alt="GitHub" class="img_stack"></li>
+                <li><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/git/git-original-wordmark.svg" alt="Git" class="img_stack"></li>
+            </ul>
+        </div>
+    </section>
+    
+    <section id="proyectos" class="revelar py-5">
+        <div class="titulo-proyectos">Proyectos</div>
+        <div class="container proyectos">
+            <div class="row justify-content-center gap-4">
+                
+                <div class="col-12 col-lg-5 card tarjeta">
+                    <div class="card-body">
+                        <h5 class="card-title titulo-card"> Plataforma de E-commerce <br> | TORO FORRAJERO |</h5>
+                        <p class="card-text texto-card">Plataforma que busca democratizar el acceso a insumos de nutrición y soluciones logísticas especializadas en el sector pecuario. Cuenta con sección de Inicio / Catalogo de Productos / Carrito de compras / Página de pago / Vista de Admin, así como con una sección Acerca de Nosotros y sección de Contacto.</p>
+                        
+                        <div id="link1">
+                            <button class="cta">  
+                                <span class="hover-underline-animation">Link a repositorio en Github </span>
+                                <svg id="arrow-horizontal" xmlns="http://www.w3.org/2000/svg" width="30" height="10" viewBox="0 0 46 16">
+                                    <path id="Path_10" data-name="Path 10" d="M8,0,6.545,1.455l5.506,5.506H-30V9.039H12.052L6.545,14.545,8,16l8-8Z" transform="translate(30)"></path>
+                                </svg>
+                            </button>
+                        </div>
+
+                        <p class="card-text"><small class="text-body-secondary subtexto-card">Proyecto en proceso</small></p>
+                    </div>
+                    <div class="contenedor-imagen">
+                        <img src="img/toro_forrajero.png" class="card-img-top imagen-card" alt="toro_forrajero_ecommerce">
+                    </div>
+                    <div class="stack-card">
+                        <ul class="card-ul">
+                            <li class="tag__name">Java</li>
+                            <li class="tag__name">Springboot</li>
+                            <li class="tag__name">HTML</li>
+                            <li class="tag__name">CSS</li>
+                            <li class="tag__name">JavaScript</li>
+                            <li class="tag__name">MySQL</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="col-12 col-lg-5 card tarjeta">
+                    <div class="card-body">
+                        <h5 class="card-title titulo-card"> Landing Page<br> | HACKATON |</h5>
+                        <p class="card-text texto-card">Landing Page de una pagina deportiva de la marca VEXA. En este Hackaton desarrollé, junto con un equipo de 6 integrantes, una landing page interactiva en menos de 10 horas, utilizando HTML para la estructura, CSS y Bootstrap para un diseño responsive, y JavaScript para implementar funcionalidades interactivas.</p>
+                        
+                        <div id="link2">
+                            <button class="cta">  
+                                <span class="hover-underline-animation">Link a repositorio en Github </span>
+                                <svg id="arrow-horizontal" xmlns="http://www.w3.org/2000/svg" width="30" height="10" viewBox="0 0 46 16">
+                                    <path id="Path_10" data-name="Path 10" d="M8,0,6.545,1.455l5.506,5.506H-30V9.039H12.052L6.545,14.545,8,16l8-8Z" transform="translate(30)"></path>
+                                </svg>
+                            </button>
+                        </div>
+                        
+                        <p class="card-text"><small class="text-body-secondary subtexto-card">Proyecto realizado en Junio 2026</small></p>
+                    </div>
+                    <div class="contenedor-imagen">
+                        <img src="img/vexa2.png" class="card-img-top imagen-card" alt="vexa">
+                    </div>
+                    <div class="stack-card">
+                        <ul class="card-ul">
+                            <li class="tag__name">HTML</li>
+                            <li class="tag__name">CSS</li>
+                            <li class="tag__name">JavaScript</li>
+                        </ul>
+                    </div>
+                </div>
+
             </div>
         </div>
     </section>
 
-    <section>
-        <div class= "descripcion py-5">
-            <h2>DATOS DE CONTACTO: </h2>
-            <p>Correo: karen.luna.salmeron@gmail.com</p>
-            <p>LinkedIn: <a href="https://www.linkedin.com/in/karen-luna-dev/">karen-luna-dev</a></p>
-            <p>Github: <a href="https://github.com/KarenLunaS">karenlunaS</a></p>
+    <section id="acerca" class="acercaDe revelar">
+        <div class="cartaPresentacion">
+            <h1 class="titulo-presentacion">¡Hola Mundo!</h1>
+
+            <p>
+                <strong>Soy Karen Luna</strong>, desarrolladora Full Stack Jr, con un enfoque especial en Java y tecnologías web. Mi camino hacia el desarrollo de software 
+                nació de descubrir que <strong>disfruto construir soluciones, entender cómo funcionan las cosas y transformar ideas en aplicaciones funcionales.</strong>
+            </p>
+
+            <p>
+                Mi perfil conjunta <strong>habilidades de comunicación, trabajo en equipo, organización y la capacidad de comprender las necesidades de las personas.</strong> 
+                Junto con mi formación técnica en Generation México (cohorte 69), donde adquirí bases sólidas en los principios de 
+                arquitectura SOLID, en la POO y en las metodologías ágiles.
+            </p>
+
+            <p>Me gusta enfrentar nuevos retos.
+                Creo que el buen desarrollo de software nace del equilibrio entre la lógica, la simplicidad y la mejora continua.
+                Valoro el aprendizaje constante porque la tecnología evoluciona todos los días.
+            </p>
+
+            <p>
+                <strong>En cada proyecto busco aplicar buenas prácticas, prestar atención a los detalles y construir aplicaciones que ofrezcan una buena experiencia para el usuario, 
+                desde el frontend hasta la lógica del backend.</strong>
+            </p>
         </div>
     </section>
 
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+    <section id="contacto" class="footer revelar">
+        <div class="grid-contacto">
+
+            <div class="contacto-col">
+                <h2>DATOS DE CONTACTO:</h2>
+                <p class="link-contacto">karen.luna.salmeron@gmail.com</p>
+                
+                <div class="contacto-info">
+                    <img class="contacto-img" src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/linkedin/linkedin-original.svg" alt="LinkedIn" />
+                    <a class="link-contacto" href="https://www.linkedin.com/in/karen-luna-dev/" target="_blank">karen-luna-dev</a>
+                </div>
+                
+                <div class="contacto-info">
+                    <img class="contacto-img-git" src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/github/github-original-wordmark.svg" alt="GitHub" />
+                    <a class="link-contacto" href="https://github.com/KarenLunaS" target="_blank">karenlunaS</a>
+                </div>
+            </div>
+
+            <div class="contacto-col">
+                <div class="contacto-form">O bien, envíame tus datos para ponernos en contacto:</div>
+                
+                <form action="#">
+                    <div class="formulario">
+                        <input type="text" required>
+                        <label>
+                            <span style="transition-delay:0ms">N</span><span style="transition-delay:50ms">o</span><span style="transition-delay:100ms">m</span><span style="transition-delay:150ms">b</span><span style="transition-delay:200ms">r</span><span style="transition-delay:250ms">e</span>
+                        </label>
+                    </div>
+
+                    <div class="formulario">
+                        <input type="email" required>
+                        <label>
+                            <span style="transition-delay:0ms">C</span><span style="transition-delay:50ms">o</span><span style="transition-delay:100ms">r</span><span style="transition-delay:150ms">r</span><span style="transition-delay:200ms">e</span><span style="transition-delay:250ms">o</span>
+                        </label>
+                    </div>
+
+                    <div class="formulario">
+                        <input type="text" required>
+                        <label>
+                            <span style="transition-delay:0ms">M</span><span style="transition-delay:50ms">o</span><span style="transition-delay:100ms">t</span><span style="transition-delay:150ms">i</span><span style="transition-delay:200ms">v</span><span style="transition-delay:250ms">o</span>
+                        </label>
+                    </div>
+                    
+                    <button type="submit" class="cta border-0 bg-transparent">
+                        <span class="hover-underline-animation2">Enviar información</span>
+                        <svg id="arrow-horizontal" xmlns="http://www.w3.org/2000/svg" width="30" height="10" viewBox="0 0 46 16">
+                            <path id="Path_10" data-name="Path 10" d="M8,0,6.545,1.455l5.506,5.506H-30V9.039H12.052L6.545,14.545,8,16l8-8Z" transform="translate(30)"></path>
+                        </svg>
+                    </button>
+                </form>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="script.js"></script>
 </body>
 </html>
