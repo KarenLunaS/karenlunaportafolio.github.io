@@ -1,3 +1,5 @@
+//Función para abrir CV
+
 document.addEventListener("DOMContentLoaded", () => {
     const elementosARevelar = document.querySelectorAll(".revelar");
 
@@ -15,6 +17,9 @@ document.addEventListener("DOMContentLoaded", () => {
     elementosARevelar.forEach(elemento => observador.observe(elemento));
 });
 
+
+//Función para el link a repo en GitHub
+
 const linkToroForrajero = document.getElementById("link1");
 
 linkToroForrajero.addEventListener("click", function (event) {
@@ -25,6 +30,8 @@ linkToroForrajero.addEventListener("click", function (event) {
     );
 });
 
+
+//Función para el link a repo en GitHub
 const linkVexa = document.getElementById("link2");
 
 linkVexa.addEventListener("click", function (event) {
