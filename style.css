@@ -32,6 +32,15 @@ body {
     margin: 0;
 }
 
+body.no-bg {
+    background-image: none;
+    background-attachment: fixed;
+    background-size: cover;
+    font-family: var(--font-principal);
+    overflow-x: hidden;
+    margin: 0;
+}
+
 section {
     scroll-margin-top: 80px;
 }
@@ -73,6 +82,17 @@ section {
     justify-content: center;
     align-items: center;
     padding: 15px 0;
+    position: relative;
+}
+
+/* Estilos del label contenedor del checkbox */
+.nav__btn-bg {
+    position: absolute;
+    right: 0;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    cursor: pointer;
 }
 
 .nav__lista {
@@ -99,6 +119,55 @@ section {
 
 .nav__enlace:hover {
     color: var(--color-cinco);
+}
+
+
+.theme-checkbox {
+  --toggle-size: 7px;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  width: 6.25em;
+  height: 3.125em;
+  background: -webkit-gradient(linear, left top, right top, color-stop(50%, #efefef), color-stop(50%, #2a2a2a)) no-repeat;
+  background: -o-linear-gradient(left, #efefef 50%, #2a2a2a 50%) no-repeat;
+  background: linear-gradient(to right, #efefef 50%, #2a2a2a 50%) no-repeat;
+  background-size: 205%;
+  background-position: 0;
+  -webkit-transition: 0.4s;
+  -o-transition: 0.4s;
+  transition: 0.4s;
+  border-radius: 99em;
+  position: relative;
+  cursor: pointer;
+  font-size: var(--toggle-size);
+}
+
+.theme-checkbox::before {
+  content: "";
+  width: 2.25em;
+  height: 2.25em;
+  position: absolute;
+  top: 0.438em;
+  left: 0.438em;
+  background: -webkit-gradient(linear, left top, right top, color-stop(50%, #efefef), color-stop(50%, #2a2a2a)) no-repeat;
+  background: -o-linear-gradient(left, #efefef 50%, #2a2a2a 50%) no-repeat;
+  background: linear-gradient(to right, #efefef 50%, #2a2a2a 50%) no-repeat;
+  background-size: 205%;
+  background-position: 100%;
+  border-radius: 50%;
+  -webkit-transition: 0.4s;
+  -o-transition: 0.4s;
+  transition: 0.4s;
+}
+
+.theme-checkbox:checked::before {
+  left: calc(100% - 2.25em - 0.438em);
+  background-position: 0;
+}
+
+.theme-checkbox:checked {
+  background-position: 100%;
 }
 
 /* Sección Presentación */
@@ -307,6 +376,14 @@ section {
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
+.card.no-bg{
+    background: rgb(22, 22, 22);
+    border: 1px solid var(--color-secundario);
+    color: var(--color-texto);
+    font-family: var(--font-principal);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
 .titulo-card {
     text-align: center;
     font-family: var(--font-principal);
@@ -488,13 +565,14 @@ section {
     background-color: var(--color-terciario);
     color: var(--color-primario);
     margin: auto;
-    padding: 40px 30px;
+    padding: 40px 40px;
     font-family: var(--font-principal);
     font-size: var(--size-texto);
     line-height: 1.6;
     border-top: 10px solid var(--color-primario);
     border-radius: 8px;
     box-sizing: border-box;
+    text-align: justify;
 }
 
 .titulo-presentacion {

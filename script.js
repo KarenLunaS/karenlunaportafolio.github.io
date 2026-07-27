@@ -41,3 +41,19 @@ linkVexa.addEventListener("click", function (event) {
         "_blank"
     );
 });
+
+//función para cambiarle el tema a la pagina
+const bgCheckbox = document.getElementById('toggle-bg-checkbox');
+const tarjetas = document.querySelectorAll('.card');
+
+bgCheckbox.addEventListener('change', () => {
+    const sinFondo = bgCheckbox.checked;
+
+    // 1. Alterna la clase en el body
+    document.body.classList.toggle('no-bg', sinFondo);
+
+    // 2. Alterna la clase en cada .card
+    tarjetas.forEach(tarjeta => {
+        tarjeta.classList.toggle('no-bg', sinFondo);
+    });
+});
