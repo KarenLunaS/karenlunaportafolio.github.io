@@ -17,9 +17,26 @@ document.addEventListener("DOMContentLoaded", () => {
     elementosARevelar.forEach(elemento => observador.observe(elemento));
 });
 
+//función para cambiarle el tema a la pagina
+document.addEventListener('DOMContentLoaded', () => {
+    const bgCheckbox = document.getElementById('toggle-bg-checkbox');
+    const tarjetas = document.querySelectorAll('.card');
+
+    // Verificamos que el elemento exista antes de agregar el evento
+    if (bgCheckbox) {
+        bgCheckbox.addEventListener('change', () => {
+            const sinFondo = bgCheckbox.checked;
+
+            document.body.classList.toggle('no-bg', sinFondo);
+
+            tarjetas.forEach(tarjeta => {
+                tarjeta.classList.toggle('no-bg', sinFondo);
+            });
+        });
+    }
+});
 
 //Función para el link a repo en GitHub
-
 const linkToroForrajero = document.getElementById("link1");
 
 linkToroForrajero.addEventListener("click", function (event) {
@@ -42,18 +59,3 @@ linkVexa.addEventListener("click", function (event) {
     );
 });
 
-//función para cambiarle el tema a la pagina
-const bgCheckbox = document.getElementById('toggle-bg-checkbox');
-const tarjetas = document.querySelectorAll('.card');
-
-bgCheckbox.addEventListener('change', () => {
-    const sinFondo = bgCheckbox.checked;
-
-    // 1. Alterna la clase en el body
-    document.body.classList.toggle('no-bg', sinFondo);
-
-    // 2. Alterna la clase en cada .card
-    tarjetas.forEach(tarjeta => {
-        tarjeta.classList.toggle('no-bg', sinFondo);
-    });
-});

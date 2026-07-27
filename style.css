@@ -123,12 +123,13 @@ section {
 
 
 .theme-checkbox {
-  --toggle-size: 7px;
+  --toggle-size: 10px; /* <--- Subimos de 7px a 10px para darle un tamaño legible */
+  display: inline-block; /* <--- CLAVE: obliga al navegador a darle caja real al checkbox */
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
-  width: 6.25em;
-  height: 3.125em;
+  width: 6.25em; /* Ahora equivale a 62.5px */
+  height: 3.125em; /* Ahora equivale a 31.25px */
   background: -webkit-gradient(linear, left top, right top, color-stop(50%, #efefef), color-stop(50%, #2a2a2a)) no-repeat;
   background: -o-linear-gradient(left, #efefef 50%, #2a2a2a 50%) no-repeat;
   background: linear-gradient(to right, #efefef 50%, #2a2a2a 50%) no-repeat;
@@ -141,6 +142,7 @@ section {
   position: relative;
   cursor: pointer;
   font-size: var(--toggle-size);
+  flex-shrink: 0; /* Evita que el contenedor flex lo aplaste */
 }
 
 .theme-checkbox::before {
